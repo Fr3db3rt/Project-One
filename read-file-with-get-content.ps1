@@ -42,9 +42,23 @@ Get-Content C:\Scripts\DisableOracleProcessing.txt -Encoding Byte
 
 # or finaly: the fastest
 Get-Content C:\Scripts\DisableOracleProcessing.txt -Encoding Byte -ReadCount 0
-
+---
 # Get-Content Aliases
 gc
 type
 cat
+---
+# some examples
+
+# read file byte by byte into variable $a
+$a = Get-Content C:\Scripts\DisableOracleProcessing.txt -Encoding Byte -ReadCount 0
+
+# ... and ...
+
+# write that variable into another new binary file
+Set-Content -Path C:\Scripts\DisableOracleProcessing2.txt -Encoding Byte -Value $a
+
+# write (pipe) into file(s)
+Get-Date | Set-Content -Path C:\Scripts\testing.txt
+
 
