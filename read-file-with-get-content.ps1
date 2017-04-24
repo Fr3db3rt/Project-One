@@ -61,4 +61,4 @@ Set-Content -Path C:\Scripts\DisableOracleProcessing2.txt -Encoding Byte -Value 
 # write (pipe) into file(s)
 Get-Date | Set-Content -Path C:\Scripts\testing.txt
 
-
+ 
